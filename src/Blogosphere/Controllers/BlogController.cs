@@ -15,5 +15,10 @@ namespace Blogosphere.Controllers
         {
             return View(ctx.Posts.ToList());
         }
+
+        public ActionResult Item(string id)
+        {
+            return View(ctx.Posts.Find(id));
+        }
     }
 }

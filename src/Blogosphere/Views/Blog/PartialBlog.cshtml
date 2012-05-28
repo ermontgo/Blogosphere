@@ -1,0 +1,7 @@
+﻿@model Blogosphere.Models.Blog
+
+<article pubdate="@Model.CreatedDate" title="@Model.Title" id="@Model.ShortName">
+    <h3>@Html.ActionLink(Model.Title, "Item", new { id = Model.ShortName }, null)</h3>
+    <p>@Model.Post</p>
+</article>
+
