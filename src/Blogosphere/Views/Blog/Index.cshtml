@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Blogosphere.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Posts</h2>
+
+<div id="posts">
+    @if (Model.Count() == 0) {
+        <p>There are no blog posts yet.</p>
+    }
+    @foreach (var item in Model)
+    {
+        <article pubdate="@item.CreatedDate" title="@item.Title" id="@item.ShortName">
+            <h3>@Html.ActionLink(item.Title, "Item", new { id = item.ShortName }, null)</h3>
+            <p>@item.Post</p>
+        </article>
+    }
+</div>
