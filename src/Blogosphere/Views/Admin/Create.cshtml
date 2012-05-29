@@ -1,0 +1,14 @@
+﻿@model Blogosphere.Models.Blog
+
+@{
+    ViewBag.Title = "Create";
+    ViewBag.IsEditing = false;
+}
+
+<h2>Create</h2>
+
+@Html.Partial("ModifyBlog")
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
